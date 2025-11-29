@@ -15,7 +15,8 @@ public class Main {
 			System.out.println("6.Sort Student by Name");
 			System.out.println("7.Exit");
 			System.out.println("Choose an option: ");
-			
+
+		try{
 			int choice = sc.nextInt();
 			switch(choice) {
 			case 1 :
@@ -67,8 +68,13 @@ public class Main {
 			default:
 				System.out.println("Invalid Choice ! ");
 			}
+		} catch(InputMismatchException e){
+			System.out.println("Error : Invalid Input. Please enter a valid number.");
+			sc.nextLine();
+		}
 		}
 
 	}
 
 }
+
